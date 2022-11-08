@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style type="text/css">
+	.leaf1{
+		width: 200px;
+		height:  200px;
+		background-image: url(https://res.cloudinary.com/dk-find-out/image/upload/q_70,c_pad,w_1200,h_630,f_auto/DCTM_Penguin_UK_DK_AL511073_yk74uu-1crop_lfulpd_swnmny.jpg);
+		display: inline-block;
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation-name: falling1;
+		animation-duration: 3s;
+		animation-iteration-count: infinte;
+		position: absolute;
+		animation-delay:  2s;
+
+
+	}
+
+
+	@keyframes falling1{
+		0% {top: 0px;}
+		20% {top: 150 px;}
+		40% {top: 300 px;}
+		60% {top: 500 px;}
+		80% {top:  650 px;}
+		100% {top: 800 px;}
+
+
+	}
+
+	.leaf2{
+		width: 200px;
+		height:  200px;
+		background-image: url(https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2088,w_3000,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/shutterstock_720277663-courtesyTatyanaMiShutterstock_djbbfn.jpg);
+		display: inline-block;
+		background-size: contain;
+		background-repeat: no-repeat;
+		animation-name: falling1;
+		animation-duration: 3s;
+		animation-iteration-count: infinte;
+		position: absolute;
+		animation-delay: 2s;
+
+
+	}
+
+
+	@keyframes falling2{
+		0% {top: 0px; left: 500px;}
+		20% {top: 150px; left;}
+		40% {top: 300px; left;}
+		60% {top: 500px; left;}
+		80% {top:  650px; left;}
+		100% {top: 800px; left;}
+
+
+	}
+		
+	</style>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function makeleaf1 (){
+		var red = document.createElement("div");
+		document.body.appendChild(red);
+		red.classList.add("leaf1");
+
+	}
+
+	function makeleaf2 (){
+			var brightred = document.createElement("div");
+			document.body.appendChild(brightred);
+			brightred.classList.add("leaf2");
+
+		}
+
+setInterval(
+
+	makeleaf1, 500
+	
+)
+
+setInterval(makeleaf2, 700)
+</script>
+</body>
+</html>
