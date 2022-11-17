@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	#photo{
+		width: 1350px;
+		height: 1200px;
+		background-size:cover;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image:url(dude.png);
+	}
+
+</style>
+</head>
+<body>
+<center>
+<div id="photo"></div>
+</center>
+<audio id="song" src="inthejungle.mp3"></audio>
+
+<script type="text/javascript">
+	
+	var clickCounter = 0;
+
+	photo.addEventListener(
+		"click", function(){
+
+	clickCounter = clickCounter + 1
+
+	if(clickCounter%2 == 0) {
+	console.log(clickCounter);
+	song.pause()
+	photo.style.backgroundImage = "url(-)"
+	}
+
+	else if(clickCounter%2 == 1) {
+	console.log(clickCounter);
+	song.play()
+	photo.style.backgroundImage = "url(dude.png)"
+
+		}
+		})
+
+</script>
+</body>
+</html>
