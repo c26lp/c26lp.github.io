@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		@font-face {
+			font-family: Gotham Bold;
+			src: url("Gotham Bold.otf") format("opentype");
+		}
+
+		body{
+			background-image: url(journal_homepage2.png);
+			margin: 0px;
+		}
+
+		p{
+
+			font-family:  Gotham Bold;
+		}
+
+		.box{
+			width: 200px;
+            height: 200px;
+            display:  inline-block;
+          	 margin:  5px;
+            background-repeat: no-repeat;
+          	background-color: green;
+            background-size: contain;
+		}
+
+		#box1{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<p> hi let's see if this works </p>
+
+<a></a>
+
+<script type="text/javascript">
+
+//For all of your media, to use this, label each file  with numbers (eg.1.jpg, 2.jpg) and keep them in the same folder as this html file. If they are not jpgs, change the extension "jpg" in the recipe below (line 25) to whatever file type they are.  
+
+//Below is the recipe to make the squares appear on the page//
+    
+    function makeSquare (placeholder) {
+
+
+    	//this creates a link and puts in the body section of our html page//
+            var link = document.createElement('a');
+            document.body.appendChild(link);
+
+//this creates a div and puts in the link we are creating//
+             var square = document.createElement('div');
+              link.appendChild(square);
+
+              //this adds the class of box to each div so we can style it all together in the css section//
+              square.classList.add("box")
+
+//this section uses whatever input we give our function when run it to label each part using, for instance, numbers//
+
+            link.href=placeholder+".html";
+             square.id = "box"+placeholder;
+             square.style.backgroundImage = "url(" + placeholder + ".png)";
+            square.style.id = "square" + placeholder;};
+
+
+
+makeSquare(1);
+   
+
+//Below, is the for loop in which where the squares are actually made. This for loop is where the function above is actually called. It is called 14 times, (between the values of 0 and 15) and because the variable i is declared in the for loop and is then being passed to the makeSquare recipe, each time the function runs, i changes in value (+1). Thus, the attributes that involve the i change in value as well (eg. the id attribute changes to be whatever i was last time, plus 1.)//
+
+
+
+    // for (var p = 1; p < 8; p=p+1) 
+    // { makeSquare(p);}
+</script>
+</body>
+</html>

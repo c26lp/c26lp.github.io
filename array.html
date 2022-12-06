@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+	
+	<style type="text/css">
+		
+	#box{
+		width: 200px;
+		height: 200px;
+		border: 3px solid magenta;
+	}
+
+	</style>
+
+</head>
+<body>
+	<center>
+	<p> click on the box to get your recommended artist!</p>
+	
+	<div id = "box"> </div>
+	</center>
+<script type="text/javascript">
+	
+	var artists = ["21 pilots", "grandson", "renforshort", "taylor swift", "artic monkeys", "the neighborhood", "peter mcpoland"]
+	var colors = [blue, red, yellow, green]
+
+	box.addEventListener("click", 
+		function(){
+			var random = Math.round(Math.random()*5);
+			box.innerText = artists[random];
+			box.backgroundColor = colors[random];
+		})
+
+</script>
+
+</body>
+</html>

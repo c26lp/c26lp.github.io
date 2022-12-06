@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
 	<style type="text/css">
-	#september{
-	width: 200px;
-	height: 200px;
-	position:0,0
-	background-color: fuchsia;
 
-	}
 	#box{
 	width:100%;
 	height:1200px;
@@ -22,13 +15,75 @@
 	background-repeat: no-repeat;
 	margin: 0px;
 	}
+	
+	.box{
+		width: 250px;
+        height: 350px;
+        display: inline-block;
+      	margin: 5px;
+        background-repeat: no-repeat;
+      	background-color: green;
+        background-size: contain;
+        background-position: absolute;
+        opacity: 50%;
+	}
+
+	#square1: {
+		background-image: url(1.png);
+	}
+	#square2: {
+		background-image: url(2.png);
+	}
+	#square3: {
+		background-image: url(3.png);
+	}
+	#square4: {
+		background-image: url(4.png);
+	}
+	#square5: {
+		background-image: url(5.png);
+	}
+	#square6: {
+		background-image: url(6.png);
+	}
+	#square7: {
+		background-image: url(7.png);
+	}
+	#square8: {
+		background-image: url(8.png);
+	}
+	#square9: {
+		background-image: url(9.png);
+	}
+	#square10: {
+		background-image: url(10.png);
+	}
 
 	</style>
 </head>
 <body>
-
 <div id="box"></div>
-<div id="september"></div>
+<div id="container">
+<script type="text/javascript">
+	
+	function makeplaylist (placeholder) {
+
+		var square = document.createElement('div')
+					container.appendChild(square)
+		square.classList.add("box")
+		var link = document.createElement('a');
+            document.body.appendChild(link);
+		square.style.backgroundSize = "cover"
+		
+		link.href = placeholder + ".html";
+		square.id = "square" + placeholder
+		square.innerText = placeholder;
+	};
+
+	for(var x = 1; x < 11; x=x+1)
+	makeplaylist(x);
+</div>
+</script>
 
 </body>
 </html>
