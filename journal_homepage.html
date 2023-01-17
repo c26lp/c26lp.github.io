@@ -3,6 +3,10 @@
 <head>
 	<style type="text/css">
 
+		a{
+			text-decoration: none;
+		}
+
 	#box{
 	width:100%;
 	height:1200px;
@@ -16,74 +20,93 @@
 	margin: 0px;
 	}
 	
-	.box{
-		width: 250px;
-        height: 350px;
+	.square{
+		width: 219px;
+        height: 300px;
         display: inline-block;
-      	margin: 5px;
+      	margin: 8px;
         background-repeat: no-repeat;
       	background-color: green;
-        background-size: contain;
+        background-size: cover;
         background-position: absolute;
-        opacity: 50%;
+        opacity: 100%;
 	}
 
-	#square1: {
+	
+	#square1 {
 		background-image: url(1.png);
 	}
-	#square2: {
+	#square2 {
 		background-image: url(2.png);
 	}
-	#square3: {
+	#square3 {
 		background-image: url(3.png);
 	}
-	#square4: {
+	#square4 {
 		background-image: url(4.png);
 	}
-	#square5: {
+	#square5 {
 		background-image: url(5.png);
 	}
-	#square6: {
+	#square6 {
 		background-image: url(6.png);
 	}
-	#square7: {
+	#square7 {
 		background-image: url(7.png);
 	}
-	#square8: {
+	#square8 {
 		background-image: url(8.png);
 	}
-	#square9: {
+	#square9 {
 		background-image: url(9.png);
 	}
-	#square10: {
+	#square10 {
 		background-image: url(10.png);
+	}
+
+
+	#container{
+		width: 1300px;
+		position: absolute;
+		left: 183px;
+		top: 70px;
 	}
 
 	</style>
 </head>
-<body>
-<div id="box"></div>
-<div id="container">
+<body>	
+<center>
+<div id="box">
+	
+	<div id="container">
+		
+	</div>
+</div>
+
 <script type="text/javascript">
 	
 	function makeplaylist (placeholder) {
 
 		var square = document.createElement('div')
-					container.appendChild(square)
-		square.classList.add("box")
+		square.classList.add("square")
 		var link = document.createElement('a');
-            document.body.appendChild(link);
+				container.appendChild(link)
+				link.appendChild(square)
+
 		square.style.backgroundSize = "cover"
 		
-		link.href = placeholder + ".html";
+		link.href = "journal " + placeholder + ".html";
 		square.id = "square" + placeholder
-		square.innerText = placeholder;
 	};
 
 	for(var x = 1; x < 11; x=x+1)
-	makeplaylist(x);
-</div>
-</script>
+	{	makeplaylist(x);
+}
 
+	
+
+</script>
+	<a href = "index.html"><div id = "square1" class = "button"></div></a>
+</center>
 </body>
 </html>

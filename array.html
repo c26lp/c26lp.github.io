@@ -23,13 +23,11 @@
 <script type="text/javascript">
 	
 	var artists = ["21 pilots", "grandson", "renforshort", "taylor swift", "artic monkeys", "the neighborhood", "peter mcpoland"]
-	var colors = [blue, red, yellow, green]
 
 	box.addEventListener("click", 
 		function(){
-			var random = Math.round(Math.random()*5);
+			var random = Math.round(Math.random()*6);
 			box.innerText = artists[random];
-			box.backgroundColor = colors[random];
 		})
 
 </script>
