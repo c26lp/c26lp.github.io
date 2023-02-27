@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.hearts{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			background-color:  transparent;
+			border-radius: 50%;
+			background-size: 50px 50px;
+			background-repeat: no-repeat;
+		}
+
+		.spin{
+			transform: rotate(720deg);
+			transition: 3s;
+		}
+
+	#base{
+			font-family: 'Fraunces', serif;
+			font-size: 200px;
+		}
+
+	#base:hover {
+        	color: darkred;
+      }
+
+ 	#see{
+		font-family: 'Fraunces', serif;
+		font-size: 100px;
+	}
+
+
+</style>
+</head>
+<body>
+<center> 
+<div id="base"> happy valentine's day! </div> 
+<div id="see"> click to see the kittens! </div> 
+</center>
+<script type="text/javascript">
+
+	function makehearts (x){
+		var heart = document.createElement("div");
+		document.body.appendChild(heart)
+		heart.classList.add("hearts")
+		heart.id = "heart" + x;
+
+		heart.addEventListener("mousemove", function(){
+			heart.classList.add("spin")
+			var random = Math.round(Math.random()*42)
+			heart.style.backgroundImage = "url(./kittens/" + random + ".jpg)"
+
+		})
+
+	}
+
+	for (i=0; i<1000; i=i+1){makehearts()}
+</script>
+</body>
+</html>

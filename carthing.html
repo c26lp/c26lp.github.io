@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+
+		#buggy{
+			width:400px;
+			height:400px;
+			background-image:url();
+			left:10px;
+			top: 10px;
+			position:absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	
+	</style>
+</head>
+<body>
+
+	<div id="buggy"></div>
+
+<audio id="song" src="mayahee.mp3"></audio>
+
+	<script type="text/javascript">
+		buggy.style.left = "0px";
+		buggy.style.top = "0px";
+
+		 var x = parseInt(buggy.style.left);
+		 var y = parseInt(buggy.style.top);
+
+		document.addEventListener("keydown", function(event){
+			console.log(event.keyCode)
+
+		if (event.keyCode == 39) {
+			x=x+10;
+			buggy.style.left = x + "px";
+			buggy.style.backgroundImage = "url('right.jpeg')"
+			song.play()
+
+		}
+
+		if (event.keyCode == 37) {
+			x=x-10;
+			buggy.style.left = x + "px";
+			buggy.style.backgroundImage = "url('left.jpeg')"
+			song.play()
+		}
+
+		if (event.keyCode == 38) {
+			y=y-10;
+			buggy.style.top = y + "px";
+			buggy.style.backgroundImage = "url('up.jpeg')"
+			song.play()
+		}
+
+		if (event.keyCode == 40) {
+			y=y+10;
+			buggy.style.top = y + "px";
+			buggy.style.backgroundImage = "url('down.jpeg')"
+			song.play()
+		}
+
+		else if (event.keyCode == 32){
+			song.pause()
+		}
+
+
+		})
+
+
+	</script>
+
+</body>
+</html>
