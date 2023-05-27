@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.hands{
+			width: 350px;
+			height: 350px;
+			background-repeat: no-repeat;	
+/*			justify-content: center;
+*/			position: relative;
+			display: inline-block;
+			margin: 0px;
+			background-position: center;
+			background-size: contain;
+			color: black;
+			font-size: 18px;
+			font-family: 'Fraunces', serif;
+			text-align: center;
+			transition: 0s;
+			background-color: black;
+
+		}
+
+		.hover{
+			transform: opacity 100;
+			transition: 0s;
+		}
+
+	#base{
+			font-family: 'Fraunces', serif;
+			font-size: 200px;
+			position: relative;
+  			left: center;
+  			top: 10px;
+  			animation-name: moveUp;
+  			animation-duration: 1.5s;
+  			animation-iteration-count: 1;
+  			opacity: 100%;
+  			color: red;
+		}
+
+	@keyframes moveUp {
+		  0% {
+		      top: 2000px;
+		      opacity: 0%;
+		  }
+		  100% {
+		      top: 10px;
+		      opacity: 100%;
+		  }
+		}
+
+ 	#see{
+		font-family: 'Fraunces', serif;
+		font-size: 50px;
+		position: relative;
+		left: center;
+		animation-name: follow;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
+		color: darkred;
+		top: 10px;
+
+	}
+
+	@keyframes follow {
+	  0% {
+	      top: 2000px;
+	  }
+	  100% {
+	      top: 10px;
+	  }
+	}
+
+	.mudra:hover {
+        	opacity: 100;
+      }
+
+
+
+ 	#see{
+		font-family: 'Fraunces', serif;
+		font-size: 100px;
+	}
+
+		#explain{
+		font-family: 'Fraunces', serif;
+		font-size: 60px;
+		position: relative;
+		color: white;
+		top: 100px;
+		opacity: 0;
+		transition: 2.5s;
+	}
+
+		#answer{
+		font-family: 'Fraunces', serif;
+		font-size: 40px;
+		position: relative;
+		opacity: 0;
+		top: 150px;
+		color: white;
+		transition: 4s;
+		height: 300px;
+		width: 100%;
+	}
+
+	#topbanner{
+		background-color: gray;
+		opacity: 50%;
+		width: 100%;
+		height: 55px;
+		background-repeat: no-repeat;	
+		position: absolute;
+		text-align: center;
+		top: 0%;
+	}
+
+		#costume{
+		position: absolute;
+		left: 260px;
+		top: 20px;
+	}
+
+		#culture{
+		position: absolute;
+		left: 520px;
+		top: 20px;
+	}
+
+		#home{
+		position: absolute;
+		left: 810px;
+		top: 20px;
+	}
+
+		#piecesshows{
+		position: absolute;
+		left: 1040px;
+		top: 20px;
+	}
+
+	a{
+		font-family: 'Fraunces', serif;
+		color: white;
+		text-decoration: none;
+	}
+
+	#main{
+		width: 100%;
+		top: 0px;
+		height: 6000px;
+		width: 1400px;
+		background-color: black;
+		justify-content: center;
+		position: relative;
+		display: inline-block;
+		margin: 0px;
+		padding-top: 150px;
+	}
+
+</style>
+</head>
+<body>
+<center> 
+<div id="main">
+
+	<div id="topbanner">
+	<a href="dancewebsite.html">
+	<div id="home">home</div>
+	</a>
+
+	<a href="culture.html">
+	<div id="culture">culture</div>
+	</a>
+
+	<a href="piecesshows.html">
+	<div id="piecesshows">pieces & shows</div>
+	</a>
+
+	<a href="costume.html">
+	<div id="costume">costume</div>
+	</a>
+	</div>
+
+<div id="base"> MUDRAS </div> 
+<div id="see"> scroll and hover to see mudras and their meanings! </div> 
+<div id="explain"> what are mudras? </div> 
+<div id="answer"> mudras are hand gestures that have symbolic meanings and play a crucial role in storytelling through dance, which is a key feature of bharatanatyam. </div> 
+</div>
+
+</center>
+
+<script type="text/javascript">
+	document.addEventListener("scroll", function(){
+		explain.style.opacity = "1";
+		answer.style.opacity = "1";
+	})
+
+	function makemudras (x){
+		var mudra = document.createElement("div");
+		main.appendChild(mudra)
+		mudra.classList.add("hands")
+		mudra.id = "mudra" + x
+		mudra.style.backgroundImage = "url(./mudras/"+x+".jpg)"
+		var textbox = document.createElement("div");
+		mudra.appendChild(textbox);
+		textbox.style.width="100%";
+		textbox.style.height="100px";
+		textbox.style.position="relative";
+		textbox.style.top="200px";
+		textbox.style.transition = "1s"
+		// textbox.style.backgroundColor ="red"
+		textbox.id = "textbox" + x;
+		textbox.style.color="white"
+		textbox.style.opacity="0"
+		// textbox.style.backgroundColor = "rgb(0, 0, 0, 0.5)";
+
+	}
+
+	for (i=0; i<31; i=i+1){makemudras(i)}
+
+
+					
+		textbox0.innerText = "pataaka - flag\nclouds, forests, & denial"
+		textbox1.innerText = "tripataaka - three colors\ntrees, arrows, crown, & thunder"
+		textbox2.innerText = "artha pataaka - half of a flag\ntwo, leaves, & board or slab"
+		textbox3.innerText = "kartari mukha - scissors\nopposition, anger, looting, & separation"
+		textbox4.innerText = "mayurakhyo - peacock\ncreepers, birds, & krishna’s feather crown"
+		textbox5.innerText = "arthachandra - half moon\nspear & throat"
+		textbox6.innerText = "araala - bent\ndrinking & harsh wind"
+		textbox7.innerText = "shukhathunda - parrot’s head\nshooting, remembering one’s abode & spear"
+		textbox8.innerText = "mushti - fist\ngrasping, steadfastness & a combative position"
+		textbox9.innerText = "shikara - a peak\nking, peak, armour, bow, & pillars"
+		textbox10.innerText = "kapittha - elephant apple\ngoddess lakshmi & saraswati, milking cows, holding cymbals, & holding a flower"
+		textbox11.innerText = "kataka mukha - opening of a bracelet, bird, & girl\n"
+		textbox12.innerText = "kataka mukha - opening of a bracelet, bird, & girl\n"
+		textbox13.innerText = "kataka mukha - opening of a bracelet, bird, & girl\n"
+		textbox14.innerText = "kataka mukha - opening of a bracelet, bird, & girl\n"
+		textbox15.innerText = "kataka mukha - opening of a bracelet, bird, & girl\n"
+
+		
+		mudra0.addEventListener("mouseenter", function(){
+			textbox0.style.opacity="1"
+			mudra0.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra0.addEventListener("mouseout", function(){
+			textbox0.style.opacity="0"
+			mudra0.style.backgroundImage="url(./mudras/0.jpg)"
+
+		})
+
+		mudra1.addEventListener("mouseenter", function(){
+			textbox1.style.opacity="1"
+			mudra1.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra1.addEventListener("mouseout", function(){
+			textbox1.style.opacity="0"
+			mudra1.style.backgroundImage="url(./mudras/1.jpg)"
+
+		})
+
+		mudra2.addEventListener("mouseenter", function(){
+			textbox2.style.opacity="1"
+			mudra2.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra2.addEventListener("mouseout", function(){
+			textbox2.style.opacity="0"
+			mudra2.style.backgroundImage="url(./mudras/2.jpg)"
+
+		})
+
+		mudra3.addEventListener("mouseenter", function(){
+			textbox3.style.opacity="1"
+			mudra3.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra3.addEventListener("mouseout", function(){
+			textbox3.style.opacity="0"
+			mudra3.style.backgroundImage="url(./mudras/3.jpg)"
+
+		})
+
+		mudra4.addEventListener("mouseenter", function(){
+			textbox4.style.opacity="1"
+			mudra4.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra4.addEventListener("mouseout", function(){
+			textbox4.style.opacity="0"
+			mudra4.style.backgroundImage="url(./mudras/4.jpg)"
+
+		})
+
+		mudra5.addEventListener("mouseenter", function(){
+			textbox5.style.opacity="1"
+			mudra5.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra5.addEventListener("mouseout", function(){
+			textbox5.style.opacity="0"
+			mudra5.style.backgroundImage="url(./mudras/5.jpg)"
+
+		})
+
+		mudra6.addEventListener("mouseenter", function(){
+			textbox6.style.opacity="1"
+			mudra6.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra6.addEventListener("mouseout", function(){
+			textbox6.style.opacity="0"
+			mudra6.style.backgroundImage="url(./mudras/6.jpg)"
+
+		})
+
+		mudra7.addEventListener("mouseenter", function(){
+			textbox7.style.opacity="1"
+			mudra7.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra7.addEventListener("mouseout", function(){
+			textbox7.style.opacity="0"
+			mudra7.style.backgroundImage="url(./mudras/7.jpg)"
+
+		})
+
+		mudra8.addEventListener("mouseenter", function(){
+			textbox8.style.opacity="1"
+			mudra8.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra8.addEventListener("mouseout", function(){
+			textbox8.style.opacity="0"
+			mudra8.style.backgroundImage="url(./mudras/8.jpg)"
+
+		})
+
+		mudra9.addEventListener("mouseenter", function(){
+			textbox9.style.opacity="1"
+			mudra9.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra9.addEventListener("mouseout", function(){
+			textbox9.style.opacity="0"
+			mudra9.style.backgroundImage="url(./mudras/9.jpg)"
+
+		})
+
+		mudra10.addEventListener("mouseenter", function(){
+			textbox10.style.opacity="1"
+			mudra10.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra10.addEventListener("mouseout", function(){
+			textbox10.style.opacity="0"
+			mudra10.style.backgroundImage="url(./mudras/10.jpg)"
+
+		})
+
+		mudra11.addEventListener("mouseenter", function(){
+			textbox11.style.opacity="1"
+			mudra11.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra11.addEventListener("mouseout", function(){
+			textbox11.style.opacity="0"
+			mudra11.style.backgroundImage="url(./mudras/11.jpg)"
+
+		})
+
+		mudra12.addEventListener("mouseenter", function(){
+			textbox12.style.opacity="1"
+			mudra12.style.backgroundImage="url(blackness.png)"
+
+		})
+
+		mudra12.addEventListener("mouseout", function(){
+			textbox12.style.opacity="0"
+			mudra12.style.backgroundImage="url(./mudras/12.jpg)"
+
+		})
+
+
+</script>
+</body>
+</html>

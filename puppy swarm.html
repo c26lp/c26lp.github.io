@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		
+		.kit{
+			width: 200px;
+			height: 200px;
+			background-image: url(kittenreaching.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function makeKitten(){
+		var kitten = document.createElement("div");
+		document.body.appendChild(kitten);
+		kitten.classList.add('kit');
+
+		function move(){
+		kitten.style.left = Math.random()*2000 + "px";
+		kitten.style.top = Math.random()*1000 + "px";
+	}
+
+	var timing = Math.round(Math.random()*2000)
+
+	setInterval(move, timing)
+
+}
+
+for(var i = 0; i<1000; i=i+1){
+	makeKitten()
+} 
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style>
+	
+	body{
+		margin: 0px;
+	}
+
+	#base{
+			font-family: 'Fraunces', serif;
+			font-size: 200px;
+			position: absolute;
+  			left: center;
+  			top: 70px;
+  			animation-name: moveUp;
+  			animation-duration: 2s;
+  			animation-iteration-count: 1;
+  			opacity: 100%;
+  			color: red;
+		}
+
+	@keyframes moveUp {
+		  0% {
+		      top: 2000px;
+		      opacity: 0%;
+		  }
+		  100% {
+		      top: 70px;
+		      opacity: 100%;
+		  }
+		}
+
+ 	#see{
+		font-family: 'Fraunces', serif;
+		font-size: 50px;
+		position: relative;
+		left: center;
+		animation-name: follow;
+		animation-duration: 4s;
+		animation-iteration-count: 1;
+		color: darkred;
+		top: 500px;
+
+	}
+
+	@keyframes follow {
+	  0% {
+	      top: 2000px;
+	  }
+	  100% {
+	      top: 500px;
+	  }
+	}
+
+	#mainimage{
+		background-image: url("dance.jpg");
+		width: 1400px;
+		height: 2000px;
+		background-repeat: no-repeat;	
+		justify-content: center;
+		position: relative;
+		display: inline-block;
+		margin: 0px;
+		padding-top: 150px;
+	}
+
+	#jewelry{
+		opacity: 0;
+		width: 240px;
+		height: 50px;
+		background-repeat: no-repeat;	
+		justify-content: center;
+		position: relative;
+		top: 1400px;
+		display: inline-block;
+		margin: 0px;
+		padding-top: 150px;
+		background-color: blue;
+		border-radius: 50%;
+	}
+
+	#costume2{
+		position: relative;
+		left: -1px;
+		top: -80px;
+		font-size: 50px;
+		opacity: 0;
+	}
+
+	#topbanner{
+		background-color: gray;
+		opacity: 50%;
+		width: 1400px;
+		height: 55px;
+		background-repeat: no-repeat;	
+		position: absolute;
+		text-align: center;
+		top: 0%;
+	}
+
+		#costume{
+		position: absolute;
+		left: 260px;
+		top: 20px;
+	}
+
+		#culture{
+		position: absolute;
+		left: 520px;
+		top: 20px;
+	}
+
+		#mudras{
+		position: absolute;
+		left: 810px;
+		top: 20px;
+	}
+
+		#piecesshows{
+		position: absolute;
+		left: 1040px;
+		top: 20px;
+	}
+
+	a{
+		font-family: 'Fraunces', serif;
+		color: white;
+		text-decoration: none;
+	}
+
+</style>
+</head>
+<body>
+<center> 
+<div id ="mainimage">	
+<div id="topbanner">
+	
+	<a href="mudras.html">
+	<div id="mudras">mudras</div>
+	</a>
+
+	<a href="culture.html">
+	<div id="culture">culture</div>
+	</a>
+
+	<a href="piecesshows.html">
+	<div id="piecesshows">pieces & shows</div>
+	</a>
+
+	<a href="costume.html">
+	<div id="costume">costume</div>
+	</a>
+
+</div>
+<center>
+<div id="base"> welcome to my dance website! </div> 
+<div id="see"> scroll to see sections! </div> 
+<div id="jewelry">
+	<a href="costume.html">
+	<div id="costume2">costumes</div>
+	</a>
+
+</div>
+</center>
+</div>
+</body>
+</html>

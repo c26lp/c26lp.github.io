@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<style type="text/css">
+		.circle{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			background-color:  red;
+			border-radius: 50%;
+			background-size: 50px 50px;
+			background-repeat: no-repeat;
+		}
+
+</style>
+</head>
+<body>
+<!-- 
+* each dot stays in a given radius regardless of its interaction with another dot
+* each dot changes color at the same pace as every other dot
+* the dots vary in sizes
+* when the mouse is moved the dots condense and move with it
+* the dots continue changing color in their condensed form
+ -->
+ <script type="text/javascript">
+ 		function makecircles (x){
+		var circle = document.createElement("div");
+		document.body.appendChild(circle)	
+		circle.classList.add("circle")
+		circle.id = "circle" + x;
+
+	function colorchange(){
+			var r = Math.round(Math.random()*256)
+			var g = Math.round(Math.random()*256)
+			var b = Math.round(Math.random()*256)
+			circle.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")"
+		}
+colorchange(setInterval(colorchange, 120))
+
+	}
+	for (i=0; i<1000; i=i+1){makecircles()}
+
+		// setInterval(makecircles, 1000);
+ </script>
+</body>
+</html>
